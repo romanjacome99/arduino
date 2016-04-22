@@ -2,9 +2,6 @@
 void setup() {
   Serial.begin(9600);
   pinMode(11, OUTPUT);
-  
-  // put your setup code here, to run once:
-
 }
 
 void loop() {
