@@ -1,12 +1,12 @@
 
 int MotorIzquierdo1=6;
 int MotorIzquierdo2=5;
-int VelocidadIzquierdo=127;
-int aceleradoIzquierdo=220;
+int VelocidadIzquierdo=92;
+int aceleradoIzquierdo=190;
 int MotorDerecho1=11;
 int MotorDerecho2=10;
-int VelocidadDerecho=105;
-int aceleradoDerecho=215;
+int VelocidadDerecho=70;
+int aceleradoDerecho=185;
 void setup() {
   pinMode(MotorIzquierdo1, OUTPUT);
   pinMode(MotorIzquierdo2, OUTPUT);
@@ -25,13 +25,13 @@ void loop() {
  int sensorIzquierdo = analogRead(2);
  int sensorDerecho = analogRead(1);
 
- if (sensorIzquierdo > 800) motorIzquierdoAdelante  (aceleradoIzquierdo);
+ if (sensorIzquierdo > 800) motorDerechoAdelante  (aceleradoDerecho);
  
- else motorDerechoDetenido() ;
+ else motorDerechoAdelante(VelocidadDerecho) ;
  
- if (sensorDerecho > 800)   motorDerechoAdelante (aceleradoDerecho);
+ if (sensorDerecho > 800)   motorIzquierdoAdelante (aceleradoIzquierdo);
  
- else motorDerechoDetenido();
+ else motorIzquierdoAdelante(VelocidadDerecho);
  
   
   
